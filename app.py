@@ -17,7 +17,6 @@ def predict():
         Year = int(request.form['Year'])
         Present_Price = request.form['Present_Price']
         Kms_Driven = int(request.form['Kms_Driven'])
-        # Owner = int(request.form['Owner'])
         Fuel_Type = request.form['Fuel_Type']
         Seller_Type = request.form['Seller_Type']
         Transmission_Type = request.form['Transmission_Type']
@@ -52,9 +51,7 @@ def predict():
             prediction_text = 'Your car can be sold for Rs {} Lakhs'.format(round(prediction, 2))
         
         return render_template('index.html', prediction_text = prediction_text)
-    # return render_template('index.html')
     return redirect(url_for('home'))
-
 
 if __name__ == '__main__':
     app.run(debug = True)
