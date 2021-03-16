@@ -1,8 +1,10 @@
-import pickle
+import warnings
 import datetime
 import sklearn
+import pickle
 from flask import Flask, render_template, request, redirect, url_for
 
+warnings.filterwarnings("ignore")
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
