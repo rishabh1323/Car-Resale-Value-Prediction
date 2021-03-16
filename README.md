@@ -20,7 +20,7 @@ Here is a web application to predict the resale value of used cars. You can also
 * Jinja2==2.11.3
 * joblib==1.0.1
 * MarkupSafe==1.1.1
-* numpy==1.20.1
+* numpy>=1.19.5
 * scikit-learn==0.24.1
 * scipy==1.6.1
 * sklearn==0.0
