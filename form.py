@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired
 
 class CarForm(FlaskForm):
     Year = IntegerField('Enter year of first purchase', validators = [DataRequired()])
-    Present_Price = StringField('Enter the showroom price', validators = [DataRequired()])
+    Present_Price = IntegerField('Enter the showroom price', validators = [DataRequired()])
     Kms_Driven = IntegerField('Enter the number of Kilometers driven', validators = [DataRequired()])
     Owner = IntegerField('Enter number of previous owners', validators = [DataRequired()])
     Fuel_Type = SelectField('Choose the fuel type', 
