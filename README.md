@@ -22,7 +22,7 @@ Here is a web application to predict the resale value of used cars. You can also
 * MarkupSafe==1.1.1
 * numpy>=1.19.5
 * scikit-learn==0.24.1
-* scipy==1.6.1
+* scipy>=1.5.4
 * sklearn==0.0
 * threadpoolctl==2.1.0
 * Werkzeug==1.0.1
