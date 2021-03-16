@@ -6,8 +6,8 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
-@app.route('/')
-@app.route('/home')
+@app.route('/', methods = ['GET'])
+@app.route('/home', methods = ['GET'])
 def home():
     return render_template('index.html')
 
