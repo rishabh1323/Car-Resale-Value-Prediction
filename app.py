@@ -1,9 +1,10 @@
 import pickle
 import datetime
-from flask import Flask, render_template, request
+import sklearn
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', rb))
+model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 @app.route('/home')
@@ -43,15 +44,16 @@ def predict():
         else:
             Transmission_Manual = 0
 
-        prediction = model.predict([['Present_Price', 'Kms_Driven', 'Num_Years', 'Fuel_Type_Diesel',
-                                    'Fuel_Type_Petrol', 'Seller_Type_Individual', 'Transmission_Manual']])
+        prediction = model.predict([[Present_Price, Kms_Driven, Num_Years, Fuel_Type_Diesel,
+                                    Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Manual]])[0]
         if prediction < 0:
             prediction_text = 'Sorry, this car can\'t be sold under these conditions'
         else:
-            prediction_text = 'Your car can be sold for Rs.{} Lakhs'.format(round(prediction, 2))
+            prediction_text = 'Your car can be sold for Rs {} Lakhs'.format(round(prediction, 2))
         
         return render_template('index.html', prediction_text = prediction_text)
-    return render_template('index.html')
+    # return render_template('index.html')
+    return redirect(url_for('home'))
 
 
 if __name__ == '__main__':
