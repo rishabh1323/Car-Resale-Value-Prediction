@@ -1,22 +1,19 @@
 # Car Resale Value Prediction
 
-Here is a web application to predict the resale value of used cars.
+Here is a web application to predict the resale value of used cars. You can also visit the web application [here].
 
 ## Dataset Used
------
 * Vehicle Dataset - from Kaggle
 * 'car data.csv' file was used for training
 * [Link to dataset](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho)
 
 ## Technologies Used
------
-1. Python 
-2. Flask
-3. Random Forest Regressor 
-4. Pickle
+* Python 
+* Flask
+* Random Forest Regressor 
+* Pickle
 
 ## Installations Required
------
 * click==7.1.2
 * Flask==1.1.2
 * itsdangerous==1.1.0
