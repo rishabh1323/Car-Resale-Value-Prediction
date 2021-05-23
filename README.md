@@ -26,9 +26,3 @@ Here is a web application to predict the resale value of used cars. You can also
 * sklearn==0.0
 * threadpoolctl==2.1.0
 * Werkzeug==1.0.1
-
-## Screenshots
-![Screenshot](screenshots/1.png)
-<hr>
-
-![Screenshot](screenshots/2.png)
